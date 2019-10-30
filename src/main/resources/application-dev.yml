@@ -1,0 +1,26 @@
+#spring.jackson.date-format=yyyy-MM-dd'T'HH:mm:ss.SSSZ
+###port
+server:
+  port: 8899
+
+spring:
+  application:
+    name: ngd-webhook
+  jackson:
+    time-zone: GMT+8
+  aop:
+    proxy-target-class: true
+
+#打印全部的API接口信息
+#打印请求参数和返回参数信息
+logging:
+  level:
+#    org.springframework.web: TRACE
+    org:
+      springframework:
+        web:
+          servlet:
+            mvc:
+              method:
+                annotation:
+                  RequestResponseBodyMethodProcessor: TRACE
